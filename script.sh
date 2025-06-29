@@ -8,6 +8,6 @@ TOKEN=""
 events=$(curl -s -H "Authorization: Bearer $TOKEN" \
   "https://api.github.com/users/${USER}/hovercard")
 
-# Print the events
+#Print the events
 echo "$events"
 echo "$events" | jq -r '.[] | {type: .type, created_at: .created_at, repo: .repo.name, payload: .payload.action}'
