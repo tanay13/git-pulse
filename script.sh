@@ -4,7 +4,7 @@
 USER="tanay13"
 TOKEN=""
 
-# Fetch all events (public and private)
+#Fetch all events (public and private)
 events=$(curl -s -H "Authorization: Bearer $TOKEN" \
   "https://api.github.com/users/${USER}/hovercard")
 
